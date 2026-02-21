@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Gas Laws Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="layout">
+
+    <div class="left-panel">
+        <h1>Gas Laws Calculator</h1>
+
+        <div class="top-controls">
+            <select id="lawSelect"></select>
+            <button class="theme-btn" onclick="toggleTheme()">☀ / 🌙</button>
+        </div>
+
+        <div class="card">
+            <div id="inputs" class="inputs"></div>
+
+            <button class="calc-btn" onclick="calculate()">Calculate</button>
+
+            <div id="result" class="result"></div>
+        </div>
+
+        <div class="keypad">
+            <div id="keypad"></div>
+        </div>
+    </div>
+
+    <div class="right-panel">
+        <h2>Formula & Solution</h2>
+        <div id="formulaBox"></div>
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

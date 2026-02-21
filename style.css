@@ -1,0 +1,161 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    transition: 0.3s;
+}
+
+/* DARK MODE (default) */
+body {
+    background: #0f172a;
+    color: white;
+}
+
+/* LIGHT MODE */
+body.light {
+    background: #f4f6f9;
+    color: #111;
+}
+
+.layout {
+    display: flex;
+    min-height: 100vh;
+}
+
+.left-panel {
+    flex: 1;
+    padding: 30px;
+}
+
+.right-panel {
+    width: 400px;
+    padding: 25px;
+    overflow-y: auto;
+}
+
+/* Dark panel */
+body:not(.light) .right-panel {
+    background: #1e293b;
+}
+
+/* Light panel */
+body.light .right-panel {
+    background: #ffffff;
+    border-left: 1px solid #ddd;
+}
+
+h1 {
+    margin-bottom: 15px;
+}
+
+.top-controls {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+select, input {
+    padding: 8px;
+    border-radius: 6px;
+    border: none;
+}
+
+/* Card styles */
+.card {
+    padding: 20px;
+    border-radius: 14px;
+    margin-bottom: 20px;
+}
+
+/* Dark card */
+body:not(.light) .card {
+    background: #1e293b;
+}
+
+/* Light card */
+body.light .card {
+    background: #ffffff;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* Inputs */
+.inputs {
+    display: grid;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.input-row {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.input-row label {
+    width: 60px;
+    font-weight: bold;
+}
+
+/* Button */
+.calc-btn {
+    width: 100%;
+    padding: 10px;
+    background: #22c55e;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.result {
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Formula Box */
+#formulaBox {
+    white-space: pre-wrap;
+    font-family: monospace;
+    line-height: 1.6;
+}
+
+/* KEYPAD */
+#keypad {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+#keypad button {
+    padding: 15px;
+    font-size: 16px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+/* Dark keypad */
+body:not(.light) #keypad button {
+    background: #334155;
+    color: white;
+}
+
+/* Light keypad */
+body.light #keypad button {
+    background: #e2e8f0;
+    color: black;
+}
+
+#keypad button:hover {
+    transform: scale(1.05);
+}
+
+#keypad .clear {
+    background: #ef4444 !important;
+    color: white !important;
+}
